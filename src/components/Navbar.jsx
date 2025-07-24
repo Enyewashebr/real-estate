@@ -7,10 +7,22 @@ const Navbar = () => {
       <div>
         <img src={assets.logo} alt="" />
         <ul>
+    
           <a href="#Header" className="cursor-pointer hover:text-gray-400 ">
             Home
+            <a href="#Header" className="cursor-pointer hover:text-gray-400 ">
+              About
+            </a>
+            <a href="#Header" className="cursor-pointer hover:text-gray-400 ">
+              Projects
+            </a>
+            <a href="#Header" className="cursor-pointer hover:text-gray-400 ">
+              Testimonials
+            </a>
+            
           </a>
         </ul>
+        <button className="hidden md:block bg-white px-8 py-2 rounded-full">Sign Up</button>
       </div>
     </div>
   );
