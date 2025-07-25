@@ -5,7 +5,7 @@ const About = () => {
   return (
     <div
       className="flex flex-col items-center justify-center container mx-auto p-14  md:px-20 lg:px-32 overflow-hidden"
-      id="About"
+      id="about"
     >
       <h1 className="text-2xl sm:text-4xl font-bold mb:2">
         About
@@ -44,6 +44,8 @@ const About = () => {
             </div>
             
           </div>
+          <p className='my-10  mx-w-lg'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione in, sint dicta voluptatum nesciunt error impedit eius rerum, maiores sequi, mollitia atque nam cum fugit eum enim quibusdam placeat quaerat.</p>
+          <button className='bg-blue-600 text-white px-8 py-2 rounded cursor-pointer'>Learn More</button>
         </div>
       </div>
     </div>

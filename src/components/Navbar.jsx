@@ -24,15 +24,15 @@ useEffect(() => {
             Home
           </a>
 
-          <a href="#Header" className="cursor-pointer hover:text-gray-400 ">
+          <a href="#about" className="cursor-pointer hover:text-gray-400 ">
             About
           </a>
 
-          <a href="#Header" className="cursor-pointer hover:text-gray-400 ">
+          <a href="#Projects" className="cursor-pointer hover:text-gray-400 ">
             Projects
           </a>
 
-          <a href="#Header" className="cursor-pointer hover:text-gray-400 ">
+          <a href="#Testimonials" className="cursor-pointer hover:text-gray-400 ">
             Testimonials
           </a>
         </ul>
@@ -80,7 +80,7 @@ useEffect(() => {
           <div className="hover:bg-blue-500  w-full border-b border-black">
             <a
               onClick={() => setShowMobileMenu(false)}
-              href="#About"
+              href="#about"
               className="font-semibold   "
             >
               About
