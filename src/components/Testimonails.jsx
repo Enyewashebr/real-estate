@@ -1,9 +1,14 @@
 import React from 'react'
 import { assets, testimonialsData } from '../assets/assets'
+import { motion } from 'framer-motion'
 
 const Testimonials = () => {
   return (
-    <div
+    <motion.div
+      initial={{ opacity: 0, x: 100 }}
+      transition={{ duration: 1 }}
+      whileInView={{ opacity: 1, x: 0 }}
+      viewport={{ once: true }}
       className="container mx-auto py-10 lg:px-32 w-full overflow-hidden"
       id="Testimonials"
     >
@@ -27,23 +32,27 @@ const Testimonials = () => {
               src={testimonial.image}
               alt={testimonial.alt}
             />
-            <h2 className="font-medium text-xl text-gray-700 ">{testimonial.name}</h2>
+            <h2 className="font-medium text-xl text-gray-700 ">
+              {testimonial.name}
+            </h2>
             <p className="text-sm text-gray-500 mb-4">{testimonial.title}</p>
             <div className="flex justify-center gap-1 text-red-500 mb-4">
-              {Array.from({ length: testimonial.rating }).map((items, index) => (
-                <img
-                  key={index}
-                  src={assets.star_icon}
-                  alt="Star Icon"
-                  className="w-4 h-4"
-                />
-              ))}
+              {Array.from({ length: testimonial.rating }).map(
+                (items, index) => (
+                  <img
+                    key={index}
+                    src={assets.star_icon}
+                    alt="Star Icon"
+                    className="w-4 h-4"
+                  />
+                )
+              )}
             </div>
-            <p className='text-gray-600'>{testimonial.text}</p>
+            <p className="text-gray-600">{testimonial.text}</p>
           </div>
         ))}
       </div>
-    </div>
+    </motion.div>
   );
 };
 

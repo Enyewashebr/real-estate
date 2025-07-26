@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react'
 import { useState } from 'react'
 import { assets, projectsData } from '../assets/assets'
+import { motion } from 'framer-motion'
 
 const Projects = () => {
 
@@ -42,7 +43,11 @@ const prevProject = () => {
 
 
   return (
-    <div
+    <motion.div
+      initial={{ opacity: 0, x: -200 }}
+      transition={{ duration: 1 }}
+      whileInView={{ opacity: 1, x: 0 }}
+      viewport={{ once: true }}
       className="container mx-auto py-4 px -6 md:px-20 lg:px-32 w-full overflow-hidden"
       id="Projects"
     >
@@ -95,7 +100,7 @@ const prevProject = () => {
                   </h2>
                   <p className="text-gray-500 text-sm">
                     {project.price}
-                    <span className='px-1'></span>
+                    <span className="px-1"></span>
                     {project.location}
                   </p>
                 </div>
@@ -104,7 +109,7 @@ const prevProject = () => {
           ))}
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 }
 
