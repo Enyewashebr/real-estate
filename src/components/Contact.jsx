@@ -1,4 +1,5 @@
 import React from 'react'
+import { toast } from 'react-toastify';
 
 const Contact = () => {
     const [result, setResult] = React.useState("");
@@ -19,11 +20,11 @@ const Contact = () => {
 
       if (data.success) {
         setResult("");
-        alert("Form Submitted Successfully");
+        toast.success("Message sent successfully!");
         event.target.reset();
       } else {
         console.log("Error", data);
-        alert(data.message);
+       toast.error(data.message);
         setResult("");
       }
     };
@@ -74,7 +75,7 @@ const Contact = () => {
             placeholder=" Message"
           ></textarea>
         </div>
-        <button className='bg-blue-600 text-white py-2 px-12 mb-10 rounded'>{result ? result : "Send Message"}</button>
+        <button className='bg-blue-600 cursor-pointer text-white py-2 px-12 mb-10 rounded'>{result ? result : "Send Message"}</button>
       </form>
     </div>
   );
